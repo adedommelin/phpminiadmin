@@ -36,7 +36,7 @@ $SHOW_D="SHOW DATABASES";
 $SHOW_T="SHOW TABLE STATUS";
 $DB=array(); #working copy for DB settings
 
-$self=$_SERVER['PHP_SELF'];
+$self = isset($PMA_URL) ? $PMA_URL : $_SERVER['PHP_SELF'];
 
 session_set_cookie_params(0, null, null, false, true);
 session_start();
